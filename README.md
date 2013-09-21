@@ -4,7 +4,7 @@ upgrade
 A helpful component to download  a  upgrade  file. Breakpoint continuingly  is supported in this project.
 
 
-Announcement£º
+Announcement£º<br>
 1.This project is a free and open-source project,developers can use this project for any intent ,and free forever.
 2.If you have any good suggestion,or you find some bugs,you can email to 6881797@163.com .We welcome the feedbacks like this kind.
 
