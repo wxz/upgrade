@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">upgrade</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Download upgrade notification -->
+    <string name="upgrade_is_loading">now is downing</string>
+    <string name="has_downed">has downloaded</string>
+    <string name="downed_complete">has downloaded successfully</string>
+    <string name="download_fail">downloaded fail</string>
+    <string name="please_try_later">please try again!</string>
+   
+</resources>

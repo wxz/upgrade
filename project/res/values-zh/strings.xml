@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+     <!-- 下载更新 通知 -->
+    <string name="upgrade_is_loading">正在下载</string>
+    <string name="has_downed">已下载</string>
+    <string name="downed_complete">已下载完成</string>
+    <string name="download_fail">下载失败</string>
+    <string name="please_try_later">请稍后重试</string>
+    
+</resources>
