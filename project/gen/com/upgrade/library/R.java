@@ -38,7 +38,7 @@ public final class R {
         public static int has_downed=0x7f050004;
         public static int hello_world=0x7f050002;
         public static int please_try_later=0x7f050007;
-        /**  下载更新 通知 
+        /**  Download upgrade notification 
  下载更新 通知 
          */
         public static int upgrade_is_loading=0x7f050003;

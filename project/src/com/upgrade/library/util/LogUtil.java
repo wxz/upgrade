@@ -5,7 +5,6 @@ import android.util.Log;
 /**
  * 
  *
- * @author xinzhangwei
  *
  ** @email 6881797@163.com
  */

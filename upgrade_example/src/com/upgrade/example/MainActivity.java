@@ -13,8 +13,6 @@ import com.upgrade.library.util.UpgradeUtil;
 
 /**
  * 
- * @author xinzhangwei
- *
  * @email 6881797@163.com
  */
 public class MainActivity extends Activity {

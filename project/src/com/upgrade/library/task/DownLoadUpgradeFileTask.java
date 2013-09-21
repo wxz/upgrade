@@ -29,7 +29,6 @@ import com.upgrade.library.util.UpgradeUtil;
  * @description 
  * 
  *
- * @author xinzhangwei
  *
  * @email 6881797@163.com
  */

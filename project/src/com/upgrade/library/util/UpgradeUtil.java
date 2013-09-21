@@ -13,7 +13,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 
 /**
- * @author xinzhangwei
  * 
  * @email 6881797@163.com
  *
