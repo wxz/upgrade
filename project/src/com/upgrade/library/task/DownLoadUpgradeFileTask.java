@@ -66,6 +66,7 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 		mBuilder.setProgress(100, 0, false);
 		mBuilder.setWhen(System.currentTimeMillis());
 		mBuilder.setTicker(mContext.getString(R.string.upgrade_is_loading));
+		mBuilder.setContentIntent(PendingIntent.getBroadcast(mContext, 1, new Intent(), 0));
 		mNoti = mBuilder.build();
 
 		mNoti.flags =  Notification.FLAG_SHOW_LIGHTS;
