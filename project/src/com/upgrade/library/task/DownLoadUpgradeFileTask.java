@@ -1,3 +1,4 @@
+
 package com.upgrade.library.task;
 
 import java.io.File;
@@ -259,5 +260,6 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 		mNotiManager.notify(notificationId, mNoti);
 		mIsDownloading = false;
 	}
+
 
 }
