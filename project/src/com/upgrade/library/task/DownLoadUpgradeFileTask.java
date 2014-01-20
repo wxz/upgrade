@@ -15,6 +15,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
@@ -75,6 +76,7 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 		mBuilder.setContentTitle(mContext
 				.getString(R.string.upgrade_is_loading));
 		mBuilder.setSmallIcon(R.drawable.ic_notification);
+		mBuilder.setLargeIcon( BitmapFactory.decodeResource(mContext.getResources(), R.drawable.ic_launcher));
 		mBuilder.setProgress(100, 0, false);
 		mBuilder.setWhen(System.currentTimeMillis());
 		mBuilder.setTicker(mContext.getString(R.string.upgrade_is_loading));
