@@ -36,8 +36,7 @@ public class MainActivity extends Activity {
 			if(mDownloadTask!=null){
 				mDownloadTask.cancel(true);
 			}
-			mDownloadTask = new DownLoadUpgradeFileTask(getApplicationContext(), testUrl, mDirPath, true);
-			mDownloadTask.execute();
+			DownLoadUpgradeFileTask.selfExecute(getApplicationContext(), testUrl, mDirPath, true);
 			break;
 		case R.id.stop_download:
 			if(mDownloadTask!=null){
