@@ -42,7 +42,9 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 	private Notification mNoti;
 	private NotificationCompat.Builder mBuilder;
 	private static final int notificationId = (int) System.currentTimeMillis();
-
+	private static  boolean mIsDownloading = false;
+	
+	
 	/***
 	 * 
 	 * @param context  
@@ -51,7 +53,16 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 	 * @param supportedBreakPoint  true means the downloading should support breakpoint continuingly.False means that every download is a new task ,and will
 	 * clear the former download.
 	 */
-	public DownLoadUpgradeFileTask(Context context, String url,String downLoadFileDir,boolean supportedBreakPoint) {
+	public static void selfExecute(Context context, String url,String downLoadFileDir,boolean supportedBreakPoint){
+		if(mIsDownloading){
+			LogUtil.i("Is downloading now!");
+		}else{
+			new DownLoadUpgradeFileTask(context,url,downLoadFileDir,supportedBreakPoint).execute();
+		}
+	}
+
+	
+	private DownLoadUpgradeFileTask(Context context, String url,String downLoadFileDir,boolean supportedBreakPoint) {
 		mUrl = url;
 		mContext = context.getApplicationContext();
 		mDownloadFileDir = downLoadFileDir;
@@ -74,6 +85,7 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 
 	@Override
 	protected void onPreExecute() {
+		mIsDownloading = true;
 		mNoti = mBuilder.build();
 		mNoti.flags = Notification.FLAG_SHOW_LIGHTS;
 		mNoti.defaults = Notification.DEFAULT_SOUND;
@@ -224,6 +236,7 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 		mNotiManager.notify(notificationId, mNoti);
 
 		mContext.startActivity(promptInstall);
+		mIsDownloading = false;
 	}
 
 	@Override
@@ -243,6 +256,7 @@ public class DownLoadUpgradeFileTask extends AsyncTask<Void, Integer, String> {
 		mNoti.ledOffMS = 2000;
 		mNoti.ledOnMS = 2000;
 		mNotiManager.notify(notificationId, mNoti);
+		mIsDownloading = false;
 	}
 
 }
